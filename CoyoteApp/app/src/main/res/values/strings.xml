@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Coyote App</string>
+    <string name="mainactivity_button_text_testcrash">Test Crash!!</string>
+</resources>
