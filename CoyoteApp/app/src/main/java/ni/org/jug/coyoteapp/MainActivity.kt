@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        info { "Hola mundo desde AnkoLogger :D :D :D" }
+        info { "Iniciando MainActivity" }
 
         btnTestCrash.setOnClickListener {
             Crashlytics.getInstance().crash() // Force a crash

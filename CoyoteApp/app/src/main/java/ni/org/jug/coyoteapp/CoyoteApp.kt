@@ -9,6 +9,8 @@ class CoyoteApp : Application() {
         super.onCreate()
         // Obtain the FirebaseAnalytics instance.
         FirebaseAnalytics.getInstance(this)
+
+        InjectorUtil.provideContext(applicationContext)
     }
 
 }

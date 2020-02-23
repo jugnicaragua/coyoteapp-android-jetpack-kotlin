@@ -30,12 +30,13 @@ android {
             debuggable true
             minifyEnabled false
             shrinkResources false
-            useProguard false
+            buildConfigField "String", "API_BASE_URL", "\"http://45.58.34.229:8080/\""
         }
         release {
             debuggable false
             minifyEnabled true
             shrinkResources true
+            buildConfigField "String", "API_BASE_URL", "\"http://45.58.34.229:8080/\""
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -80,6 +81,13 @@ dependencies {
     // Anko Commons
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version" // For SnackBars
+
+    // Retrofit2
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2"
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
     testImplementation "junit:junit:$junit"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit"
